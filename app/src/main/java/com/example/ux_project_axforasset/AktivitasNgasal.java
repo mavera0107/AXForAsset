@@ -30,5 +30,9 @@ public class AktivitasNgasal {
 >>>>>>> 1a2c529 (Merge remote-tracking branch 'origin/master')
 =======
     // AAAAbbb
+<<<<<<< HEAD
 >>>>>>> ee6eb8e (tes2)
+=======
+    // gogogo
+>>>>>>> 6e74fa1 (tes2)
 }
