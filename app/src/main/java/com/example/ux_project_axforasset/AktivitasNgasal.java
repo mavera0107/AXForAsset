@@ -4,6 +4,7 @@ public class AktivitasNgasal {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   // kamu tolol
     // iya
 =======
@@ -15,4 +16,7 @@ public class AktivitasNgasal {
 =======
   // AAA
 >>>>>>> c9c8abb (tes2)
+=======
+  // BBBB
+>>>>>>> 22fc872 (iya2)
 }
