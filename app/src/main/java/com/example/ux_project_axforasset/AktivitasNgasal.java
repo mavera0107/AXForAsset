@@ -6,6 +6,7 @@ public class AktivitasNgasal {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   // kamu tolol
 <<<<<<< HEAD
     // iya
@@ -25,6 +26,8 @@ public class AktivitasNgasal {
   // BBBBaaa
 >>>>>>> 4ff6c53 (Merge remote-tracking branch 'origin/master')
 =======
+=======
+>>>>>>> c11183a (tes2)
     // BBBBaaa
 <<<<<<< HEAD
 >>>>>>> 1a2c529 (Merge remote-tracking branch 'origin/master')
