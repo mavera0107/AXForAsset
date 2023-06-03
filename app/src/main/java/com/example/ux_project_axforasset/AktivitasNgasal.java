@@ -3,6 +3,7 @@ package com.example.ux_project_axforasset;
 public class AktivitasNgasal {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   // kamu tolol
     // iya
 =======
@@ -11,4 +12,7 @@ public class AktivitasNgasal {
 =======
   // bebek
 >>>>>>> d468ce0 (iya2)
+=======
+  // AAA
+>>>>>>> c9c8abb (tes2)
 }
