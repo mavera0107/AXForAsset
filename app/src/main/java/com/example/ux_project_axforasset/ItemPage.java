@@ -1,6 +1,7 @@
 package com.example.ux_project_axforasset;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -46,6 +47,7 @@ public class ItemPage extends AppCompatActivity implements ClickInterface{
 
     @Override
     public void onClick(int position) {
+        // nanti ini buat buka konten gamenya.
         Toast.makeText(this, assetlistitem.get(position).getAssetName(), Toast.LENGTH_SHORT).show();
     }
 }

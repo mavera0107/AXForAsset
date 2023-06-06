@@ -7,23 +7,26 @@
     android:layout_height="wrap_content"
     android:elevation="0dp"
     android:orientation="vertical"
-    app:cardElevation="0dp"
+    android:layout_margin="25dp"
+    app:cardElevation="8dp"
     app:cardMaxElevation="0dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/consLayout_Asset"
-        android:layout_width="328dp"
+        android:layout_width="289dp"
         android:layout_height="276dp"
+        android:layout_marginBottom="0dp"
         android:background="@drawable/kotakputihdenganshadow"
-        android:elevation="15dp">
+        android:elevation="125dp">
 
 
         <ImageView
             android:id="@+id/iv_AssetImage"
-            android:layout_width="328dp"
-            android:layout_height="122dp"
+            android:layout_width="match_parent"
+            android:layout_height="127dp"
+            android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@tools:sample/avatars" />
@@ -36,28 +39,30 @@
             android:layout_marginTop="136dp"
             android:fontFamily="@font/open_sans_bold"
             android:text="AssetName"
-            android:textColor="#015478"
+            android:textColor="@color/cstm_grey2"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_AssetShortDesc"
-            android:layout_width="172dp"
+            android:layout_width="154dp"
             android:layout_height="80dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="176dp"
             android:fontFamily="@font/open_sans_semibold"
             android:text="TextView"
+            android:textColor="@color/cstm_grey2"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/btn_AssetDetails"
-            android:layout_width="111dp"
-            android:layout_height="63dp"
+            android:layout_width="104dp"
+            android:layout_height="53dp"
 
-            android:layout_marginStart="200dp"
+            android:layout_marginStart="172dp"
             android:layout_marginTop="176dp"
             android:backgroundTint="#FFFFFF"
             android:fontFamily="@font/open_sans_bold"
