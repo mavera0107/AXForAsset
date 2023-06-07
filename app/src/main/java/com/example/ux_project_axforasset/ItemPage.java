@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -48,6 +49,14 @@ public class ItemPage extends AppCompatActivity implements ClickInterface{
     @Override
     public void onClick(int position) {
         // nanti ini buat buka konten gamenya.
-        Toast.makeText(this, assetlistitem.get(position).getAssetName(), Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, assetlistitem.get(position).getAssetName(), Toast.LENGTH_SHORT).show();
+        viewItemDetails();
     }
+
+    public void viewItemDetails() {
+        Intent intentItemDetail = new Intent(this, ItemDetailsPage.class);
+        startActivity(intentItemDetail);
+    }
+
+
 }
