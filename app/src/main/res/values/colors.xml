@@ -5,4 +5,9 @@
 
     <color name="cstm_grey">#969696</color>
     <color name="cstm_grey2">#333333</color>
+
+    // biruan
+    <color name="cstm_blue">#027DB4</color>
+    <color name="csm_blue2">#015478</color>
+
 </resources>
