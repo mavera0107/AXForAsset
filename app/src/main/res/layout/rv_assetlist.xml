@@ -46,12 +46,12 @@
 
         <TextView
             android:id="@+id/tv_AssetShortDesc"
-            android:layout_width="154dp"
+            android:layout_width="140dp"
             android:layout_height="80dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="176dp"
             android:fontFamily="@font/open_sans_semibold"
-            android:text="TextView"
+            android:text="AAAAAAAAAAAAAAAAAAAAAAAAAA"
             android:textColor="@color/cstm_grey2"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"

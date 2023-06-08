@@ -17,7 +17,7 @@
         tools:layout_editor_absoluteX="-16dp">
 
         <ImageView
-            android:id="@+id/imageView17"
+            android:id="@+id/iv_assetImage"
             android:layout_width="match_parent"
             android:layout_height="185dp"
             android:layout_weight="1"
