@@ -8,5 +8,9 @@
     <corners
         android:radius="5dp"/>
 
+    <stroke
+        android:width="5px"
+        android:color="@color/cstm_grey"/>
+
 
 </shape>

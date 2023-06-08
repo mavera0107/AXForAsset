@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class ItemDetailsPage extends AppCompatActivity {
@@ -14,6 +16,8 @@ public class ItemDetailsPage extends AppCompatActivity {
     Button button;
     TextView atv_assetname, atv_price, atv_shortdesc, atv_longdesc;
     ImageView aiv_assetimage;
+
+    Spinner paymentSpinner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,8 +47,15 @@ public class ItemDetailsPage extends AppCompatActivity {
         aiv_assetimage.setImageResource(mImageData);
 
 
-
+        // Button initialize
         button = (Button) findViewById(R.id.TOMBOLUJI);
+
+        // Spinner Initialize
+        paymentSpinner = (Spinner) findViewById(R.id.input_paymentspinner);
+        ArrayAdapter<CharSequence> spinAdapter = ArrayAdapter.createFromResource(this, R.array.payment_method_array_spinner, android.R.layout.simple_spinner_item);
+        spinAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        paymentSpinner.setAdapter(spinAdapter);
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

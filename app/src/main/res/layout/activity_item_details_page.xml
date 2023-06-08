@@ -127,23 +127,25 @@
 
             <RelativeLayout
                 android:id="@+id/relativeLayout"
-                android:layout_width="wrap_content"
-                android:layout_height="49dp"
+                android:layout_width="261dp"
+                android:layout_height="52dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="4dp"
                 android:background="@drawable/kotakputihdenganshadow"
+                android:minHeight="50dp"
                 android:padding="0dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView24">
 
                 <Spinner
                     android:id="@+id/input_paymentspinner"
-                    android:layout_width="250dp"
-                    android:layout_height="50dp"
+                    android:layout_width="260dp"
+                    android:layout_height="48dp"
                     android:layout_alignParentStart="true"
                     android:layout_marginStart="1dp"
                     android:layout_marginTop="4dp"
                     android:contextClickable="false"
+                    android:minHeight="50dp"
                     app:layout_constraintStart_toStartOf="parent" />
 
             </RelativeLayout>
@@ -195,8 +197,8 @@
                 android:layout_height="49dp"
                 android:layout_marginStart="4dp"
                 android:background="@drawable/kotakputihroundedcorner"
-                android:backgroundTint="@color/white"
                 android:text="BUY NOW"
+                android:elevation="0dp"
                 android:textColor="@color/cstm_grey2"
                 android:textSize="9sp"
                 app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
