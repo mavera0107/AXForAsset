@@ -5,13 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-public class ItemDetailsPage extends AppCompatActivity {
+public class ItemDetailsPage extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     Button button;
     TextView atv_assetname, atv_price, atv_shortdesc, atv_longdesc;
@@ -55,6 +56,7 @@ public class ItemDetailsPage extends AppCompatActivity {
         ArrayAdapter<CharSequence> spinAdapter = ArrayAdapter.createFromResource(this, R.array.payment_method_array_spinner, android.R.layout.simple_spinner_item);
         spinAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         paymentSpinner.setAdapter(spinAdapter);
+        paymentSpinner.setOnItemSelectedListener(this);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,4 +74,13 @@ public class ItemDetailsPage extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
 }

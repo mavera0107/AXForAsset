@@ -8,6 +8,7 @@
     <string name="previous">Previous</string>
 
     <string-array name="payment_method_array_spinner">
+        <item>-- Select Payment Method --</item>
         <item>Visa</item>
         <item>Master Card</item>
         <item>Credit Card</item>
