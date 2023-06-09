@@ -13,13 +13,13 @@
         android:theme="@style/Theme.UX_Project_AXForAsset"
         tools:targetApi="31">
         <activity
-            android:name=".Homepage"
+            android:name=".ItemPage"
             android:exported="false" />
         <activity
             android:name=".ItemDetailsPage"
             android:exported="false" />
         <activity
-            android:name=".ItemPage"
+            android:name=".Homepage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

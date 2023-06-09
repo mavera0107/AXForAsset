@@ -1,11 +1,14 @@
 <resources>
-    <string name="app_name">UX_Project_AXForAsset</string>
+    <string name="app_name">AXForAsset</string>
     <string name="title_activity_item_page">ItemPage</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+
+    <string name="nav_open_drawer">Navigation Open Drawer</string>
+    <string name="nav_close_drawer">Navigation Close Drawer</string>
 
     <string-array name="payment_method_array_spinner">
         <item>-- Select Payment Method --</item>
@@ -21,7 +24,7 @@
 
     <string-array name="error_descriptions">
         <item>Please enter your email.</item>
-        <item>Please seelct a payment method.</item>
+        <item>Please select a payment method.</item>
     </string-array>
 
     <string name="lorem_ipsum">
