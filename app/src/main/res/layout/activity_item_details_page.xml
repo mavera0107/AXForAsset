@@ -192,7 +192,7 @@
             <!--                tools:layout_editor_absoluteY="113dp" />-->
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button3"
+                android:id="@+id/btn_buybutton"
                 android:layout_width="96dp"
                 android:layout_height="49dp"
                 android:layout_marginStart="4dp"
