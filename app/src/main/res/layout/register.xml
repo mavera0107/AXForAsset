@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bglgin2"
->
+    android:background="@drawable/bglgin2">
 
     <ImageView
         android:id="@+id/imageView"
@@ -37,8 +36,8 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
+        android:hint="Enter your first name"
         android:inputType="text"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -49,8 +48,8 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
+        android:hint="Enter your last name"
         android:inputType="text"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/editTextText" />
 
@@ -61,8 +60,8 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
+        android:hint="Create Username"
         android:inputType="text"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
 
@@ -73,6 +72,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
+        android:hint="enter your email address"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
@@ -84,6 +84,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
+        android:hint="Type your password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
@@ -95,6 +96,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
+        android:hint="Confirm your password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
@@ -105,7 +107,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="RadioButton"
+        android:text="I agree to the terms and agreement"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3" />
 
@@ -114,7 +116,9 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="Button"
+        android:text="Register"
+        android:textColorHighlight="#2196F3"
+        android:textColorLink="#03A9F4"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="@+id/imageView"
@@ -124,7 +128,7 @@
         android:id="@+id/button4"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Already have an account ? login here"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="@+id/imageView"
@@ -140,7 +144,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/editTextText"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/user" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -152,7 +156,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/editTextText2"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/user" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -164,7 +168,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/editTextTextEmailAddress"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/mail" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -176,7 +180,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/editTextText3"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/user" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -188,7 +192,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/editTextTextPassword2"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@drawable/paswod" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -200,14 +204,14 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/editTextTextPassword3"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/paswod" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:text="TextView"
+        android:text="First Name"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintStart_toStartOf="@+id/imageView3" />
 
@@ -216,7 +220,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:text="TextView"
+        android:text="Last Name"
         app:layout_constraintBottom_toTopOf="@+id/imageView4"
         app:layout_constraintStart_toStartOf="@+id/imageView4" />
 
@@ -225,7 +229,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:text="TextView"
+        android:text="Email"
         app:layout_constraintBottom_toTopOf="@+id/imageView5"
         app:layout_constraintStart_toStartOf="@+id/imageView5" />
 
@@ -234,7 +238,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:text="TextView"
+        android:text="Username"
         app:layout_constraintBottom_toTopOf="@+id/imageView6"
         app:layout_constraintStart_toStartOf="@+id/imageView6" />
 
@@ -243,7 +247,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:text="TextView"
+        android:text="Password"
         app:layout_constraintBottom_toTopOf="@+id/imageView7"
         app:layout_constraintStart_toStartOf="@+id/imageView7" />
 
@@ -252,7 +256,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:text="TextView"
+        android:text="Confirm Password"
         app:layout_constraintBottom_toTopOf="@+id/imageView8"
         app:layout_constraintStart_toStartOf="@+id/imageView8" />
 
