@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatDialogFragment;
 
 public class DialogBoxFragment extends AppCompatDialogFragment {
 
+
     String err_name, err_desc;
     TextView tv_err_desc;
     int type = 0; // 0 = Error Message, 1 = Success validasi di ItemDetails
@@ -48,7 +49,7 @@ public class DialogBoxFragment extends AppCompatDialogFragment {
         } else if (type == 1) {
             alertBuilder.setView(view)
                     .setTitle(err_name)
-                    .setNegativeButton("Back to Item Page", new DialogInterface.OnClickListener() {
+                    .setPositiveButton("Back to Item Page", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             detailspage.backButtonTes();
