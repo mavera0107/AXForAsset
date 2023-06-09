@@ -14,12 +14,12 @@
         <item>Credit Card</item>
     </string-array>
 
-    <string-array name ="error_titles">
+    <string-array name="error_titles">
         <item>Invalid Email</item>
         <item>No Payment Method Selected</item>
     </string-array>
 
-    <string-array name ="error_descriptions">
+    <string-array name="error_descriptions">
         <item>Please enter your email.</item>
         <item>Please seelct a payment method.</item>
     </string-array>

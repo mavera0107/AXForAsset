@@ -31,7 +31,7 @@ public class AssetListItemAdapter extends RecyclerView.Adapter<AssetListItemAdap
     @NonNull
     @Override
     public AssetListItemAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(context).inflate(R.layout.rv_assetlist, parent, false); // ini syntaxnya apa coba.
+        View v = LayoutInflater.from(context).inflate(R.layout.rv_assetlist, parent, false);
         return new ViewHolder(v);
     }
 
