@@ -1,8 +1,22 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.UX_Project_AXForAsset" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.UX_Project_AXForAsset" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:alertDialogTheme">@style/AlertDialogButtonRecolor</item>
+    </style>
+
+    <style name = "AlertDialogButtonRecolor" parent ="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name ="android:buttonBarNegativeButtonStyle">@style/NegativeButton</item>
+        <item name ="android:buttonBarPositiveButtonStyle">@style/PositiveButton</item>
+    </style>
+
+    <style name="NegativeButton" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/csm_blue2</item>
+    </style>
+
+    <style name="PositiveButton" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/csm_blue2</item>
     </style>
 
     <style name="Theme.UX_Project_AXForAsset" parent="Base.Theme.UX_Project_AXForAsset" />

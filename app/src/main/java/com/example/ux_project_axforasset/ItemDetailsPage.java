@@ -83,7 +83,7 @@ public class ItemDetailsPage extends AppCompatActivity implements AdapterView.On
             } else if (spinnerValue == 0) {
                 alertDialogue("No Payment Method Selected", "Please select a payment method.", 0);
             } else {
-                alertDialogue("Success", "You Did it!", 1);
+                alertDialogue("Order Successful!", "The asset will be sent to your email shortly!", 1);
             }
 
         });
