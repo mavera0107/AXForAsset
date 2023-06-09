@@ -19,6 +19,7 @@
         <activity
             android:name=".ItemDetailsPage"
             android:exported="false"/>
+<<<<<<< HEAD
 >>>>>>> 0709536 (Asset Detail dan Asset List sudah fungsional)
         <activity
             android:name=".ItemPage"
@@ -26,6 +27,13 @@
         <activity
             android:name=".ItemDetailsPage"
             android:exported="false" />
+=======
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+>>>>>>> 39890ae (drawer(sidemenu pindah2 belum))
         <activity
             android:name=".Homepage"
             android:exported="true">
@@ -35,9 +43,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+=======
+>>>>>>> 39890ae (drawer(sidemenu pindah2 belum))
 
         <meta-data
             android:name="preloaded_fonts"
