@@ -87,8 +87,7 @@ public class ItemPage extends AppCompatActivity implements ClickInterface{
 
     @Override
     public void onClick(int position) {
-        // nanti ini buat buka konten gamenya.
-//        Toast.makeText(this, assetlistitem.get(position).getAssetName(), Toast.LENGTH_SHORT).show();
+        // buat ganti konten asset details
         viewItemDetails(position);
     }
 
@@ -100,7 +99,6 @@ public class ItemPage extends AppCompatActivity implements ClickInterface{
         String mAssetLongDesc = (String) assetlistitem.get(x).getAssetLongDesc();
         String mAssetPrice = (String) assetlistitem.get(x).getAssetPrice();
         int mAssetImage = assetlistitem.get(x).getAssetImage();
-//        int mAssetImage = Integer.parseInt(assetlistitem.get(x).)
 
         Intent intentItemDetail = new Intent(this, ItemDetailsPage.class);
         intentItemDetail.putExtra(extraName, mAssetTitle);

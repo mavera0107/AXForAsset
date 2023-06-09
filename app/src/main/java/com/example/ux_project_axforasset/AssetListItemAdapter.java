@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -41,13 +42,12 @@ public class AssetListItemAdapter extends RecyclerView.Adapter<AssetListItemAdap
         holder.tv_AssetShortDesc.setText(assetListItem.get(position).getAssetShortDesc());
         holder.iv_AssetImage.setImageResource(assetListItem.get(position).getAssetImage());
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
+        holder.itemView.findViewById(R.id.btn_AssetDetails).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 clickInterface.onClick(holder.getBindingAdapterPosition());
             }
         });
-
     }
 
     @Override
