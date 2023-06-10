@@ -5,9 +5,14 @@
 
     <color name="cstm_grey">#969696</color>
     <color name="cstm_grey2">#333333</color>
+    <color name="abu">#505151</color>
 
     // biruan
     <color name="cstm_blue">#027DB4</color>
     <color name="csm_blue2">#015478</color>
 
+    // Eru
+    <color name="birulg">#2196F3</color>
+    <color name="birulg2">#72C1FF</color>
+    <color name="birulg3">#002F55</color>
 </resources>

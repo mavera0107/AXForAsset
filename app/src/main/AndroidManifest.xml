@@ -13,6 +13,7 @@
 <<<<<<< HEAD
         android:theme="@style/Theme.UX_Project_AXForAsset"
         tools:targetApi="31">
+<<<<<<< HEAD
 =======
         android:theme="@style/Base.Theme.UX_Project_AXForAsset"
         tools:targetApi="31" >
@@ -34,8 +35,22 @@
             android:exported="false" />
 
 >>>>>>> 39890ae (drawer(sidemenu pindah2 belum))
+=======
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".loginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ItemDetailsPage"
+            android:exported="false" />
+>>>>>>> 006f9f6 (tinggal restriction home sama profile)
         <activity
             android:name=".Homepage"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
