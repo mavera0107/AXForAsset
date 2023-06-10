@@ -20,7 +20,7 @@ import com.google.android.material.navigation.NavigationView;
 import java.util.TimerTask;
 import java.util.Vector;
 
-public class Homepage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, ClickInterface {
+public class Homepage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, ClickInterface, ClickInterface2 {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
@@ -37,12 +37,17 @@ public class Homepage extends AppCompatActivity implements NavigationView.OnNavi
     ConstraintLayout assetItem1;
 
     // semua recyclerview
+<<<<<<< HEAD
     RecyclerView rv_peringkatAtas, rv_palingpopuler;
     Vector<AssetListItem> assetlistitem1, assetlistitem2;
 =======
     //TEST GLOBVAR
     String GLOBAL_USERNAME;
 >>>>>>> f60b608 (global var aman(harusnya))
+=======
+    RecyclerView rv_peringkatAtas, rv_palingpopuler, rv_rekomendasi;
+    Vector<AssetListItem> assetlistitem1, assetlistitem2, assetlistitem3;
+>>>>>>> cb02473 (Home tambahan asset yang dapat di klik.)
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,6 +114,38 @@ public class Homepage extends AppCompatActivity implements NavigationView.OnNavi
 
     }
 
+    @Override
+    public void onClick(int position, int position2) {
+        viewItemDetails(position, position2);
+    }
+
+    public void viewItemDetails(int position, int position2) {
+        int x = position;
+
+        Vector<AssetListItem> assetlistitem = null;
+        if(position2 == 1) {
+            assetlistitem = assetlistitem1;
+        } else if (position2 == 2) {
+            assetlistitem = assetlistitem2;
+        } else if (position2 == 3) {
+            assetlistitem = assetlistitem3;
+        }
+
+        String mAssetTitle = (String) assetlistitem.get(x).getAssetName();
+        String mAssetShortDesc = (String) assetlistitem.get(x).getAssetShortDesc();
+        String mAssetLongDesc = (String) assetlistitem.get(x).getAssetLongDesc();
+        String mAssetPrice = (String) assetlistitem.get(x).getAssetPrice();
+        int mAssetImage = assetlistitem.get(x).getAssetImage();
+
+        Intent intentItemDetail = new Intent(this, ItemDetailsPage.class);
+        intentItemDetail.putExtra(ItemPage.extraName, mAssetTitle);
+        intentItemDetail.putExtra(ItemPage.extraShortDesc, mAssetShortDesc);
+        intentItemDetail.putExtra(ItemPage.extraLongDesc, mAssetLongDesc);
+        intentItemDetail.putExtra(ItemPage.extraPrice, mAssetPrice);
+        intentItemDetail.putExtra(ItemPage.extraImage, mAssetImage);
+        startActivity(intentItemDetail);
+    }
+
     public class The_slide_timer extends TimerTask {
         @Override
         public void run() {
@@ -161,65 +198,131 @@ public class Homepage extends AppCompatActivity implements NavigationView.OnNavi
         // Get semua assetItem. maaf gapake for loop
         rv_peringkatAtas = (RecyclerView) findViewById(R.id.rv_peringkatatas);
         rv_palingpopuler = (RecyclerView) findViewById(R.id.rv_paling_populer);
+        rv_rekomendasi = (RecyclerView) findViewById(R.id.rv_rekomendasi);
 
         assetlistitem1 = new Vector<>();
         assetlistitem2 = new Vector<>();
+        assetlistitem3 = new Vector<>();
 
         assetlistitem1.add(new AssetListItem(
-                "Wizard duck",
-                "A Toon Styled 3D Asset",
-                "$12.99",
-                R.drawable.wizardduck,
-                "Duck who mastered the art of magic. " +
-                        "This asset comes with 2 different " +
-                        "texture variants and sample animations"));
+                "Crosshair",
+                "A generic FPS crosshair asset.",
+                "$3.69",
+                R.drawable.target,
+                "Crosshairs are commonly used in modern FPS games." +
+                        "Crosshairs are used to guide players aiming direction"));
 
         assetlistitem1.add(new AssetListItem(
-                "Angry Man",
-                "A Cartoon Styled 3D Model",
-                "$9.99",
-                R.drawable.angryman,
-                "An Angry man 3D Asset. Beware of this man. " +
-                        "An asset with single texture variant. " +
-                        "Fully Rigged."));
+                "Foxie",
+                "A Fox Symbol",
+                "$0.99",
+                R.drawable.fox,
+                "A symbol of a fox. Minimalist"));
 
         assetlistitem1.add(new AssetListItem(
-                "Lotus Evora S",
-                "A Realistic Styled 3D Asset",
-                "$15.99",
-                R.drawable.evoras,
-                "A 3D asset. Sportscar model. Comes with " +
-                        "sample animations and fully rigged."));
+                "Peace Sign",
+                "Peace Sign Icon",
+                "$3.69",
+                R.drawable.hand,
+                "A peace hand 2D Gesture  for use in Unity, " +
+                        "Unreal, and More."));
 
         assetlistitem2.add(new AssetListItem(
-                "Wizard duck",
-                "A Toon Styled 3D Asset",
-                "$12.99",
-                R.drawable.wizardduck,
-                "Duck who mastered the art of magic. " +
-                        "This asset comes with 2 different " +
-                        "texture variants and sample animations"));
+                "Genshin Impact",
+                "Asset game terbaik.",
+                "$6.69",
+                R.drawable.carousel1,
+                "Asset digunakan untuk memodifikasi game ini."));
 
         assetlistitem2.add(new AssetListItem(
-                "Angry Man",
-                "A Cartoon Styled 3D Model",
-                "$9.99",
-                R.drawable.angryman,
-                "An Angry man 3D Asset. Beware of this man. " +
-                        "An asset with single texture variant. " +
-                        "Fully Rigged."));
+                "Campfire",
+                "A Campfire symbol, A high quality 2D icon image",
+                "$6.99",
+                R.drawable.campfire,
+                "A cozy looking campfire icon for personal and commercial use."));
 
-        AssetMiniAdapter adapter1 = new AssetMiniAdapter(this, this);
+        assetlistitem3.add(new AssetListItem(
+                "Crosshair",
+                "A generic FPS crosshair asset.",
+                "$3.69",
+                R.drawable.target,
+                "Crosshairs are commonly used in modern FPS games." +
+                        "Crosshairs are used to guide players aiming direction"));
+
+        assetlistitem3.add(new AssetListItem(
+                "Foxie",
+                "A Fox Symbol",
+                "$0.99",
+                R.drawable.fox,
+                "A symbol of a fox. Minimalist"));
+
+        assetlistitem3.add(new AssetListItem(
+                "Peace Sign",
+                "Peace Sign Icon",
+                "$3.69",
+                R.drawable.hand,
+                "A peace hand 2D Gesture  for use in Unity, " +
+                        "Unreal, and More."));
+
+        assetlistitem3.add(new AssetListItem(
+                "Hexaweb",
+                "A Hexagonal Shape Icon",
+                "$2.99",
+                R.drawable.hexagon,
+                "For commercial and personal use."));
+
+        assetlistitem3.add(new AssetListItem(
+                "Tribox",
+                "A Tribox 2D Icon Asset",
+                "$4.99",
+                R.drawable.shapes,
+                "A 2D Icon tribox asset."));
+
+        assetlistitem3.add(new AssetListItem(
+                "Backward",
+                "A Backward 2D Icon.",
+                "$1.99",
+                R.drawable.backward,
+                "A minimal style backward Icon."));
+
+        assetlistitem3.add(new AssetListItem(
+                "Bowtie",
+                "A Bowtie Image Asset",
+                "FREE",
+                R.drawable.two_arrow,
+                "A free asset. A bowtie 2D image asset."));
+
+        assetlistitem3.add(new AssetListItem(
+                "Glico",
+                "A Custom made 2D Icon Asset",
+                "$9.99",
+                R.drawable.letter_g,
+                "An Icon."));
+
+        assetlistitem3.add(new AssetListItem(
+                "Campfire",
+                "A Campfire symbol, A high quality 2D icon image",
+                "$6.99",
+                R.drawable.campfire,
+                "A cozy looking campfire icon for personal and commercial use."));
+
+
+        AssetMiniAdapter adapter1 = new AssetMiniAdapter(this, this, 1);
         adapter1.setAssetListItem(assetlistitem1);
 
-        AssetMiniAdapter adapter2 = new AssetMiniAdapter(this, this);
+        AssetMiniAdapter adapter2 = new AssetMiniAdapter(this, this, 2);
         adapter2.setAssetListItem(assetlistitem2);
+
+        AssetMiniAdapter adapter3 = new AssetMiniAdapter(this, this, 3);
+        adapter3.setAssetListItem(assetlistitem3);
 
 
         rv_peringkatAtas.setAdapter(adapter1);
         rv_peringkatAtas.setLayoutManager(new GridLayoutManager(this, 3));
         rv_palingpopuler.setAdapter(adapter2);
         rv_palingpopuler.setLayoutManager(new GridLayoutManager(this, 2));
+        rv_rekomendasi.setAdapter(adapter3);
+        rv_rekomendasi.setLayoutManager(new GridLayoutManager(this, 3));
 
     }
 

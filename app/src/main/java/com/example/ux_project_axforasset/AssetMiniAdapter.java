@@ -17,11 +17,14 @@ public class AssetMiniAdapter extends RecyclerView.Adapter<AssetMiniAdapter.View
 
     Vector<AssetListItem> assetListItem;
     Context context;
-    ClickInterface clickInterface;
+    ClickInterface2 clickInterface;
 
-    public AssetMiniAdapter(Context context, ClickInterface clickInterface) {
+    int btnindex;
+
+    public AssetMiniAdapter(Context context, ClickInterface2 clickInterface, int btnindex) {
         this.context = context;
         this.clickInterface = clickInterface;
+        this.btnindex = btnindex;
     }
 
     public void setAssetListItem(Vector<AssetListItem> assetListItem) {
@@ -45,7 +48,7 @@ public class AssetMiniAdapter extends RecyclerView.Adapter<AssetMiniAdapter.View
         holder.itemView.findViewById(R.id.assetItem).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                clickInterface.onClick(holder.getBindingAdapterPosition());
+                clickInterface.onClick(holder.getBindingAdapterPosition(), btnindex);
             }
         });
     }

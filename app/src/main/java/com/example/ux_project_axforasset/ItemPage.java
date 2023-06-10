@@ -28,12 +28,12 @@ public class ItemPage extends AppCompatActivity implements ClickInterface, Navig
     Toolbar toolbar;
 
     String GLOBAL_USERNAME;
-
     public static final String extraName = "com.example.ux_project_axforasset.ItemPage.extraName";
     public static final String extraShortDesc = "com.example.ux_project_axforasset.ItemPage.extraShortDesc";
     public static final String extraLongDesc = "com.example.ux_project_axforasset.ItemPage.extraLongDesc";
     public static final String extraPrice = "com.example.ux_project_axforasset.ItemPage.extraPrice";
     public static final String extraImage = "com.example.ux_project_axforasset.ItemPage.extraImage";
+
     RecyclerView rv_assetlist;
     Vector<AssetListItem> assetlistitem;
 
