@@ -29,6 +29,11 @@ public class Homepage extends AppCompatActivity implements NavigationView.OnNavi
     private ViewPager viewPager;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    //TEST GLOBALVAR
+    String GLOBAL_USERNAME;
+>>>>>>> c9bfe81 (Checkpoint apalah2)
     ConstraintLayout assetItem1;
 
     // semua recyclerview
@@ -45,6 +50,7 @@ public class Homepage extends AppCompatActivity implements NavigationView.OnNavi
         setContentView(R.layout.activity_homepage);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         drawerLayout = findViewById(R.id.rv_palingpopuler);
 //        navigationView = findViewById(R.id.nav_view);
 //        toolbar = findViewById(R.id.toolbar);
@@ -52,6 +58,12 @@ public class Homepage extends AppCompatActivity implements NavigationView.OnNavi
         GLOBAL_USERNAME = getIntent().getStringExtra("Username");
 
         //MENU BAR
+=======
+        GLOBAL_USERNAME = getIntent().getStringExtra("Username");
+
+        //MENU BAR
+
+>>>>>>> c9bfe81 (Checkpoint apalah2)
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
@@ -72,7 +84,10 @@ public class Homepage extends AppCompatActivity implements NavigationView.OnNavi
 
 //        navigationView.setCheckedItem(R.id.home_menu);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c9bfe81 (Checkpoint apalah2)
         //CAROUSEL
         viewPager = findViewById(R.id.mainViewPager);
         listImage = new Vector<>();

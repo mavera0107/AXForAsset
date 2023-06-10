@@ -53,22 +53,14 @@
             android:exported="false" />
 >>>>>>> 006f9f6 (tinggal restriction home sama profile)
         <activity
-            android:name=".Profile"
-            android:exported="false" />
-        <activity
             android:name=".Homepage"
-            android:exported="true">
-
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
-
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c9bfe81 (Checkpoint apalah2)
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -76,6 +68,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <activity
             android:name=".MainActivity"
@@ -85,6 +78,8 @@
 =======
             android:exported="false"/>
 >>>>>>> b12d479 (Perjuangan Iman)
+=======
+>>>>>>> c9bfe81 (Checkpoint apalah2)
 
         <meta-data
             android:name="preloaded_fonts"
