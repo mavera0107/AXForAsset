@@ -57,22 +57,16 @@ public class Homepage extends AppCompatActivity implements NavigationView.OnNavi
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-//        switch (item.getItemId()){
-//            case R.id.home_menu:
-//                break;
-//            case R.id.items_menu:
-//                Intent intent = new Intent(Homepage.this, ItemPage.class);
-//                startActivity(intent);
-//                break;
-//            case R.id.profile_menu:
-//                Intent intent = new Intent(Homepage.this, profile.class);
-//                startActivity(intent);
-//                break;
-//            case R.id.logout_menu:
-//                Intent intent = new Intent(Homepage.this, Login.class);
-//                startActivity(intent);
-//                break;
-//        }
+        if(item.getItemId() == R.id.items_menu){
+            Intent intent = new Intent(Homepage.this, ItemPage.class);
+            startActivity(intent);
+        } else if (item.getItemId() == R.id.profile_menu) {
+            Intent intent = new Intent(Homepage.this, Profile.class);
+            startActivity(intent);
+        } else if (item.getItemId() == R.id.logout_menu) {
+            Intent intent = new Intent(Homepage.this, loginActivity.class);
+            startActivity(intent);
+        }
 
         drawerLayout.closeDrawer((GravityCompat.START));
         return true;

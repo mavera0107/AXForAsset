@@ -37,7 +37,7 @@
 >>>>>>> 39890ae (drawer(sidemenu pindah2 belum))
 =======
         <activity
-            android:name=".RegisterActivity"
+            android:name=".Profile"
             android:exported="false" />
         <activity
             android:name=".loginActivity"

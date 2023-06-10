@@ -24,15 +24,15 @@ public class loginActivity extends AppCompatActivity {
             }
         });
 
-        Button btn2 = findViewById(R.id.lregis);
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(loginActivity.this, RegisterActivity.class);
-                startActivity(intent);
-            }
-        });
-
+//        Button btn2 = findViewById(R.id.lregis);
+//        btn2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(loginActivity.this, RegisterActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//
     }
 
 
