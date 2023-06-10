@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.navigation.NavAction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -64,7 +63,7 @@ public class Homepage extends AppCompatActivity implements NavigationView.OnNavi
             Intent intent = new Intent(Homepage.this, Profile.class);
             startActivity(intent);
         } else if (item.getItemId() == R.id.logout_menu) {
-            Intent intent = new Intent(Homepage.this, loginActivity.class);
+            Intent intent = new Intent(Homepage.this, Login.class);
             startActivity(intent);
         }
 

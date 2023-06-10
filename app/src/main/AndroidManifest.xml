@@ -40,7 +40,7 @@
             android:name=".Profile"
             android:exported="false" />
         <activity
-            android:name=".loginActivity"
+            android:name=".Login"
             android:exported="false" />
         <activity
             android:name=".ItemDetailsPage"
