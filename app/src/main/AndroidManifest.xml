@@ -51,9 +51,18 @@
 >>>>>>> 006f9f6 (tinggal restriction home sama profile)
         <activity
             android:name=".Homepage"
-            android:exported="false" />
+            android:exported="true">
+
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+
         <activity
             android:name=".MainActivity"
+<<<<<<< HEAD
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -67,6 +76,9 @@
             android:exported="false" />
 =======
 >>>>>>> 39890ae (drawer(sidemenu pindah2 belum))
+=======
+            android:exported="false"/>
+>>>>>>> b12d479 (Perjuangan Iman)
 
         <meta-data
             android:name="preloaded_fonts"

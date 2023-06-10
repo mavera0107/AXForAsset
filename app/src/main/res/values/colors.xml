@@ -10,6 +10,10 @@
     // biruan
     <color name="cstm_blue">#027DB4</color>
     <color name="csm_blue2">#015478</color>
+    <color name="cstm_blue3">#81D9FF</color>
+
+    // homepage color
+    <color name="cstm_ungu">#B7BEFF</color>
 
     // Eru
     <color name="birulg">#2196F3</color>
