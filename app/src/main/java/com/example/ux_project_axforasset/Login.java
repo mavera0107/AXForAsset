@@ -10,8 +10,6 @@ import android.widget.EditText;
 
 public class Login extends AppCompatActivity {
 
-    public static final String Global_user="name";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +43,7 @@ public class Login extends AppCompatActivity {
                     ltfpw.setError("Password minimal memiliki 8 karakter");
                 } else {
                     Intent intent = new Intent(Login.this, Homepage.class);
-                    intent.putExtra(Global_user,username);
+                    intent.putExtra("Username", username);
                     startActivity(intent);
                 }
             }

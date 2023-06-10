@@ -28,20 +28,33 @@ public class Homepage extends AppCompatActivity implements NavigationView.OnNavi
     private Vector<Integer> listImage;
     private ViewPager viewPager;
 
+<<<<<<< HEAD
     ConstraintLayout assetItem1;
 
     // semua recyclerview
     RecyclerView rv_peringkatAtas, rv_palingpopuler;
     Vector<AssetListItem> assetlistitem1, assetlistitem2;
+=======
+    //TEST GLOBVAR
+    String GLOBAL_USERNAME;
+>>>>>>> f60b608 (global var aman(harusnya))
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
 
+<<<<<<< HEAD
         drawerLayout = findViewById(R.id.rv_palingpopuler);
 //        navigationView = findViewById(R.id.nav_view);
 //        toolbar = findViewById(R.id.toolbar);
+=======
+        GLOBAL_USERNAME = getIntent().getStringExtra("Username");
+
+        drawerLayout = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.nav_view);
+        toolbar = findViewById(R.id.toolbar);
+>>>>>>> f60b608 (global var aman(harusnya))
 
         setSupportActionBar(toolbar);
 
@@ -111,9 +124,11 @@ public class Homepage extends AppCompatActivity implements NavigationView.OnNavi
 
         if(item.getItemId() == R.id.items_menu){
             Intent intent = new Intent(Homepage.this, ItemPage.class);
+            intent.putExtra("Username", GLOBAL_USERNAME);
             startActivity(intent);
         } else if (item.getItemId() == R.id.profile_menu) {
             Intent intent = new Intent(Homepage.this, Profile.class);
+            intent.putExtra("Username", GLOBAL_USERNAME);
             startActivity(intent);
         } else if (item.getItemId() == R.id.logout_menu) {
             Intent intent = new Intent(Homepage.this, Login.class);

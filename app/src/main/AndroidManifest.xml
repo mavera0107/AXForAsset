@@ -50,6 +50,9 @@
             android:exported="false" />
 >>>>>>> 006f9f6 (tinggal restriction home sama profile)
         <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
             android:name=".Homepage"
             android:exported="true">
 

@@ -25,6 +25,9 @@ public class ItemDetailsPage extends AppCompatActivity implements AdapterView.On
     Spinner paymentSpinner;
     int spinnerValue = 0;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
