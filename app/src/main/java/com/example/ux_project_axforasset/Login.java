@@ -10,6 +10,11 @@ import android.widget.EditText;
 
 public class Login extends AppCompatActivity {
 
+<<<<<<< HEAD
+=======
+    public static  String globalUser="name";
+
+>>>>>>> 6c54b33 (kelar)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,11 +47,19 @@ public class Login extends AppCompatActivity {
                 } else if (password.length() < 8) {
                     ltfpw.setError("Password minimal memiliki 8 karakter");
                 } else {
+                    globalUser = username;
                     Intent intent = new Intent(Login.this, Homepage.class);
+<<<<<<< HEAD
                     intent.putExtra("Username", username);
+=======
+
+>>>>>>> 6c54b33 (kelar)
                     startActivity(intent);
                 }
             }
         });
+    }
+    public static String getGlobalUser() {
+        return globalUser;
     }
 }
