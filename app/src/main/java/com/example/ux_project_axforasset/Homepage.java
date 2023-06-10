@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.navigation.NavAction;
+import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,10 +15,16 @@ import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.TimerTask;
+import java.util.Vector;
+
 public class Homepage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+
+    private Vector<Integer> listImage;
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +49,37 @@ public class Homepage extends AppCompatActivity implements NavigationView.OnNavi
         navigationView.setNavigationItemSelectedListener(this);
 
         navigationView.setCheckedItem(R.id.home_menu);
+
+
+
+        viewPager = findViewById(R.id.mainViewPager);
+        listImage = new Vector<>();
+        listImage.add(R.drawable.carousel1);
+        listImage.add(R.drawable.carousel2);
+        listImage.add(R.drawable.carousel3);
+
+        ItemSliderAdapter adapter = new ItemSliderAdapter(listImage, this);
+        viewPager.setAdapter(adapter);
+
+        java.util.Timer timer = new java.util.Timer();
+        timer.scheduleAtFixedRate(new The_slide_timer(),2000,3000);
+    }
+
+    public class The_slide_timer extends TimerTask {
+        @Override
+        public void run() {
+
+            Homepage.this.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    if (viewPager.getCurrentItem()< listImage.size()-1) {
+                        viewPager.setCurrentItem(viewPager.getCurrentItem()+1);
+                    }
+                    else
+                        viewPager.setCurrentItem(0);
+                }
+            });
+        }
     }
 
     @Override
