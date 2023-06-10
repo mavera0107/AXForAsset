@@ -11,6 +11,7 @@
     tools:context=".Homepage"
     tools:openDrawer="start">
 
+<<<<<<< HEAD
 
     <!--    <com.google.android.material.navigation.NavigationView-->
     <!--        android:layout_width="wrap_content"-->
@@ -18,6 +19,14 @@
     <!--        android:id="@+id/nav_view"-->
     <!--        app:menu="@menu/side_menu"-->
     <!--        android:layout_gravity="start"/>-->
+=======
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        app:menu="@menu/side_menu"
+        android:layout_gravity="start"/>
+>>>>>>> 8465190 (Semua udah ada menunya + global var udah aman)
 
     <ScrollView
         android:layout_width="match_parent"

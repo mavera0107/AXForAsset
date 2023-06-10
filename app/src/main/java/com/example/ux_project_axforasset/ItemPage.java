@@ -1,6 +1,11 @@
 package com.example.ux_project_axforasset;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,11 +13,21 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Toast;
+
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.Vector;
 
-public class ItemPage extends AppCompatActivity implements ClickInterface{
+public class ItemPage extends AppCompatActivity implements ClickInterface, NavigationView.OnNavigationItemSelectedListener{
+
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    Toolbar toolbar;
+
+    String GLOBAL_USERNAME;
 
     public static final String extraName = "com.example.ux_project_axforasset.ItemPage.extraName";
     public static final String extraShortDesc = "com.example.ux_project_axforasset.ItemPage.extraShortDesc";
@@ -83,6 +98,26 @@ public class ItemPage extends AppCompatActivity implements ClickInterface{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_page);
         initialize();
+        GLOBAL_USERNAME = getIntent().getStringExtra("Username");
+
+        drawerLayout = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.nav_view);
+        toolbar = findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar);
+
+        Menu menu = navigationView.getMenu();
+        menu.findItem(R.id.items_menu).setVisible(false);
+
+        navigationView.bringToFront();
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
+                R.string.nav_open_drawer, R.string.nav_close_drawer);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+
+        navigationView.setNavigationItemSelectedListener(this);
+
+        navigationView.setCheckedItem(R.id.items_menu);
     }
 
     @Override
@@ -107,6 +142,35 @@ public class ItemPage extends AppCompatActivity implements ClickInterface{
         intentItemDetail.putExtra(extraPrice, mAssetPrice);
         intentItemDetail.putExtra(extraImage, mAssetImage);
         startActivity(intentItemDetail);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
+            drawerLayout.closeDrawer(GravityCompat.START);
+        }else{
+            super.onBackPressed();
+        }
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId() == R.id.home_menu){
+            Intent intent = new Intent(ItemPage.this, Homepage.class);
+            intent.putExtra("Username", GLOBAL_USERNAME);
+            startActivity(intent);
+        } else if (item.getItemId() == R.id.profile_menu) {
+            Intent intent = new Intent(ItemPage.this, Profile.class);
+            intent.putExtra("Username", GLOBAL_USERNAME);
+            startActivity(intent);
+        } else if (item.getItemId() == R.id.logout_menu) {
+            Intent intent = new Intent(ItemPage.this, Login.class);
+            startActivity(intent);
+        }
+
+        drawerLayout.closeDrawer((GravityCompat.START));
+        return true;
     }
 
 

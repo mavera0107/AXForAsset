@@ -51,6 +51,7 @@ public class Homepage extends AppCompatActivity implements NavigationView.OnNavi
 =======
         GLOBAL_USERNAME = getIntent().getStringExtra("Username");
 
+        //MENU BAR
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
@@ -72,7 +73,7 @@ public class Homepage extends AppCompatActivity implements NavigationView.OnNavi
 //        navigationView.setCheckedItem(R.id.home_menu);
 
 
-
+        //CAROUSEL
         viewPager = findViewById(R.id.mainViewPager);
         listImage = new Vector<>();
         listImage.add(R.drawable.carousel1);
@@ -110,6 +111,8 @@ public class Homepage extends AppCompatActivity implements NavigationView.OnNavi
         }
     }
 
+
+    //MENU BAR
     @Override
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)){
