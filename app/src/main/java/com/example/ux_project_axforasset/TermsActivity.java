@@ -72,6 +72,10 @@ public class TermsActivity extends AppCompatActivity implements NavigationView.O
             Intent intent = new Intent(TermsActivity.this, HomepageActivity.class);
             intent.putExtra("Username", GLOBAL_USERNAME);
             startActivity(intent);
+        } else if(item.getItemId() == R.id.items_menu) {
+            Intent intent = new Intent(TermsActivity.this, ItemActivity.class);
+            intent.putExtra("Username", GLOBAL_USERNAME);
+            startActivity(intent);
         } else if (item.getItemId() == R.id.profile_menu) {
             Intent intent = new Intent(TermsActivity.this, ProfileActivity.class);
             intent.putExtra("Username", GLOBAL_USERNAME);

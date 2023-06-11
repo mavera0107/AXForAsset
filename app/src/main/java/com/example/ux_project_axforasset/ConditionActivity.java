@@ -73,6 +73,10 @@ public class ConditionActivity extends AppCompatActivity implements NavigationVi
             Intent intent = new Intent(ConditionActivity.this, HomepageActivity.class);
             intent.putExtra("Username", GLOBAL_USERNAME);
             startActivity(intent);
+        } else if(item.getItemId() == R.id.items_menu) {
+            Intent intent = new Intent(ConditionActivity.this, ItemActivity.class);
+            intent.putExtra("Username", GLOBAL_USERNAME);
+            startActivity(intent);
         } else if (item.getItemId() == R.id.profile_menu) {
             Intent intent = new Intent(ConditionActivity.this, ProfileActivity.class);
             intent.putExtra("Username", GLOBAL_USERNAME);

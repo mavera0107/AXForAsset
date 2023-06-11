@@ -185,6 +185,7 @@ public class ItemActivity extends AppCompatActivity implements ClickInterface, N
         navigationView.setNavigationItemSelectedListener(this);
 
         navigationView.setCheckedItem(R.id.items_menu);
+        navBarTnC();
     }
 
     @Override
