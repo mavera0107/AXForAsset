@@ -150,6 +150,7 @@ public class HomepageActivity extends AppCompatActivity implements NavigationVie
         intentItemDetail.putExtra(ItemActivity.extraLongDesc, mAssetLongDesc);
         intentItemDetail.putExtra(ItemActivity.extraPrice, mAssetPrice);
         intentItemDetail.putExtra(ItemActivity.extraImage, mAssetImage);
+        intentItemDetail.putExtra("Username", GLOBAL_USERNAME);
         startActivity(intentItemDetail);
     }
 
