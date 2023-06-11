@@ -52,6 +52,8 @@ public class HomepageActivity extends AppCompatActivity implements NavigationVie
     Vector<AssetListItem> assetlistitem1, assetlistitem2, assetlistitem3;
 >>>>>>> cb02473 (Home tambahan asset yang dapat di klik.)
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -111,6 +113,7 @@ public class HomepageActivity extends AppCompatActivity implements NavigationVie
 
         getSemuaItem();
         moreitemsOnClick();
+        navBarTnC();
     }
 
     @Override
@@ -343,4 +346,29 @@ public class HomepageActivity extends AppCompatActivity implements NavigationVie
         });
     }
 
+    public void navBarTnC() {
+        TextView tab1 = findViewById(R.id.tab1);
+        TextView tab2 = findViewById(R.id.tab2);
+        String GLOBAL_USERNAME;
+        Intent intent;
+        GLOBAL_USERNAME = getIntent().getStringExtra("Username");
+
+        tab1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v){
+                Intent intent = new Intent(HomepageActivity.this, ItemActivity.class);
+                intent.putExtra("Username", GLOBAL_USERNAME);
+                startActivity(intent);
+            }
+        });
+
+        tab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v){
+                Intent intent = new Intent(HomepageActivity.this, ItemActivity.class);
+                intent.putExtra("Username", GLOBAL_USERNAME);
+                startActivity(intent);
+            }
+        });
+    }
 }

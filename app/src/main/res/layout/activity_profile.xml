@@ -133,13 +133,13 @@
 
             <TextView
                 android:id="@+id/textView11"
-                android:layout_width="372dp"
-                android:layout_height="54dp"
-                android:layout_marginTop="15dp"
+                android:layout_width="371dp"
+                android:layout_height="61dp"
                 android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
                 android:text="Jl. Raya Kb. Jeruk No.27, RT.1/RW.9, Kb. Jeruk, Kec. Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11530"
-                android:textSize="16sp"
                 android:textColor="@color/black"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView10" />
 

@@ -14,6 +14,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -206,6 +208,7 @@ public class ItemActivity extends AppCompatActivity implements ClickInterface, N
         intentItemDetail.putExtra(extraLongDesc, mAssetLongDesc);
         intentItemDetail.putExtra(extraPrice, mAssetPrice);
         intentItemDetail.putExtra(extraImage, mAssetImage);
+        intentItemDetail.putExtra("Username", GLOBAL_USERNAME);
         startActivity(intentItemDetail);
     }
 
@@ -238,5 +241,30 @@ public class ItemActivity extends AppCompatActivity implements ClickInterface, N
         return true;
     }
 
+    public void navBarTnC() {
+        TextView tab1 = findViewById(R.id.tab1);
+        TextView tab2 = findViewById(R.id.tab2);
+        String GLOBAL_USERNAME;
+        Intent intent;
+        GLOBAL_USERNAME = getIntent().getStringExtra("Username");
+
+        tab1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v){
+                Intent intent = new Intent(ItemActivity.this, TermsActivity.class);
+                intent.putExtra("Username", GLOBAL_USERNAME);
+                startActivity(intent);
+            }
+        });
+
+        tab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v){
+                Intent intent = new Intent(ItemActivity.this, ConditionActivity.class);
+                intent.putExtra("Username", GLOBAL_USERNAME);
+                startActivity(intent);
+            }
+        });
+    }
 
 }

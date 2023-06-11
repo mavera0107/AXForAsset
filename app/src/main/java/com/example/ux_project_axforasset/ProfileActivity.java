@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
@@ -83,7 +84,7 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
         textview2.setText(GLOBAL_USERNAME + "@gmail.com");
 >>>>>>> 64d2e69 (meki)
 
-
+        navBarTnC();
     }
 
     //MENU BAR
@@ -114,5 +115,31 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
 
         drawerLayout.closeDrawer((GravityCompat.START));
         return true;
+    }
+
+    public void navBarTnC() {
+        TextView tab1 = findViewById(R.id.tab1);
+        TextView tab2 = findViewById(R.id.tab2);
+        String GLOBAL_USERNAME;
+        Intent intent;
+        GLOBAL_USERNAME = getIntent().getStringExtra("Username");
+
+        tab1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v){
+                Intent intent = new Intent(ProfileActivity.this, TermsActivity.class);
+                intent.putExtra("Username", GLOBAL_USERNAME);
+                startActivity(intent);
+            }
+        });
+
+        tab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v){
+                Intent intent = new Intent(ProfileActivity.this, ConditionActivity.class);
+                intent.putExtra("Username", GLOBAL_USERNAME);
+                startActivity(intent);
+            }
+        });
     }
 }
