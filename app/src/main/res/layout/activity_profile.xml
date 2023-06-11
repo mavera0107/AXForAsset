@@ -9,13 +9,13 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-    <com.google.android.material.navigation.NavigationView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:id="@+id/nav_view"
-        app:menu="@menu/side_menu"
-        android:layout_gravity="start">
-    </com.google.android.material.navigation.NavigationView>
+<!--    <com.google.android.material.navigation.NavigationView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:id="@+id/nav_view"-->
+<!--        app:menu="@menu/side_menu"-->
+<!--        android:layout_gravity="start">-->
+<!--    </com.google.android.material.navigation.NavigationView>-->
 
 
     <LinearLayout
@@ -46,13 +46,12 @@
 
             <TextView
                 android:id="@+id/hi_user"
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
+                android:layout_width="408dp"
+                android:layout_height="43dp"
                 android:layout_marginTop="24dp"
                 android:text="Hi!"
-                android:gravity="center"
-                android:textColor="@color/black"
                 android:textAlignment="center"
+                android:textColor="@color/black"
                 android:textSize="28sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
