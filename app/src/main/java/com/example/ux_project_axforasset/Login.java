@@ -41,11 +41,11 @@ public class Login extends AppCompatActivity {
                 String password = ltfpw.getText().toString().trim();
 
                 if (username.isEmpty()) {
-                    ltfname.setError("Username tidak boleh kosong");
+                    ltfname.setError("Username cannot be empty");
                 } else if (password.isEmpty()) {
-                    ltfpw.setError("Password tidak boleh kosong");
+                    ltfpw.setError("Password cannot be empty");
                 } else if (password.length() < 8) {
-                    ltfpw.setError("Password minimal memiliki 8 karakter");
+                    ltfpw.setError("Password must have at least 8 characters");
                 } else {
                     globalUser = username;
                     Intent intent = new Intent(Login.this, Homepage.class);

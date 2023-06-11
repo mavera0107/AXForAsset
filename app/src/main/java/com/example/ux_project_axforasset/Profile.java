@@ -57,15 +57,20 @@ public class Profile extends AppCompatActivity implements NavigationView.OnNavig
         textview = findViewById(R.id.hi_user);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         textview.setText("Hi " + GLOBAL_USERNAME);
 =======
         Intent intent = getIntent();
         String profsapa ="hi  !  " + Login.getGlobalUser();
 >>>>>>> 6c54b33 (kelar)
+=======
+        textview.setText("Hi, " + GLOBAL_USERNAME);
+>>>>>>> 64d2e69 (meki)
 
 
         textview2 = findViewById(R.id.glob_email);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         textview2.setText(GLOBAL_USERNAME + "@email.com");
 =======
@@ -74,6 +79,9 @@ public class Profile extends AppCompatActivity implements NavigationView.OnNavig
 
         textview2.setText(globmail);
 >>>>>>> 6c54b33 (kelar)
+=======
+        textview2.setText(GLOBAL_USERNAME + "@gmail.com");
+>>>>>>> 64d2e69 (meki)
 
 
     }

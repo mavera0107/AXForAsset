@@ -19,6 +19,8 @@ import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Vector;
 
 public class ItemPage extends AppCompatActivity implements ClickInterface, NavigationView.OnNavigationItemSelectedListener{
@@ -39,6 +41,8 @@ public class ItemPage extends AppCompatActivity implements ClickInterface, Navig
 
     public void initialize() {
         rv_assetlist = findViewById(R.id.rvAssetListView);
+        rv_assetlist.setLayoutManager(new GridLayoutManager(this, 2));
+        List<String> data = new ArrayList<>();
 
         assetlistitem = new Vector<>();
 
@@ -83,6 +87,69 @@ public class ItemPage extends AppCompatActivity implements ClickInterface, Navig
                 R.drawable.woodenmug ,
                 "Cartoon Styled 3D mug asset. " +
                         "A medieval/fantasy themed mugs. For use in Blender."));
+
+        assetlistitem.add(new AssetListItem(
+                "Crosshair",
+                "A generic FPS crosshair asset",
+                "$3.69",
+                R.drawable.target ,
+                "Crosshairs are commonly used in modern FPS games, crosshairs are used to guide players aiming direction."));
+
+        assetlistitem.add(new AssetListItem(
+                "Foxie",
+                "A fox symbol",
+                "$0.99",
+                R.drawable.fox ,
+                "A symbol of a Fox. Minimalist."));
+
+        assetlistitem.add(new AssetListItem(
+                "Peace Sign",
+                "Peace Sign Icon",
+                "$3.69",
+                R.drawable.hand ,
+                "A peace hand gesture 2D asset for use in Unity Unreal and more."));
+
+        assetlistitem.add(new AssetListItem(
+                "Hexaweb",
+                "A hexagonal shape icon",
+                "$2.99",
+                R.drawable.hexagon ,
+                "For personal and commercial purposes."));
+
+        assetlistitem.add(new AssetListItem(
+                "Tribox",
+                "A tribox 2D icon asset.",
+                "$4.99",
+                R.drawable.shapes,
+                ""));
+
+        assetlistitem.add(new AssetListItem(
+                "Backward",
+                "A backward 2D icon",
+                "$1.99",
+                R.drawable.backward,
+                "A minimal style backward icon"));
+
+        assetlistitem.add(new AssetListItem(
+                "Bowtie",
+                "Bowtie image asset",
+                "FREE",
+                R.drawable.two_arrow,
+                "A free asset. A bowtie 2D asset."));
+
+        assetlistitem.add(new AssetListItem(
+                "Glico",
+                "A custom made icon asset",
+                "$9.99",
+                R.drawable.letter_g,
+                ""));
+
+        assetlistitem.add(new AssetListItem(
+                "Campfire",
+                "A campfire symbol have a high quality icon image",
+                "$6.99",
+                R.drawable.campfire,
+                "A cozy looking campfire icon for personal and commercial use."));
 
         AssetListItemAdapter adapter = new AssetListItemAdapter(this, this);
         adapter.setAssetListItem(assetlistitem);

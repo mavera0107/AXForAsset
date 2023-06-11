@@ -233,6 +233,14 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <TextView
+                android:id="@+id/moreitemsTv"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:text="Tampilkan lebih banyak"
+                android:gravity="center"
+                android:clickable="true"/>
+
 
         </LinearLayout>
 

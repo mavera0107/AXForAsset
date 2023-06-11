@@ -14,6 +14,8 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -323,6 +325,22 @@ public class Homepage extends AppCompatActivity implements NavigationView.OnNavi
         rv_palingpopuler.setLayoutManager(new GridLayoutManager(this, 2));
         rv_rekomendasi.setAdapter(adapter3);
         rv_rekomendasi.setLayoutManager(new GridLayoutManager(this, 3));
+
+    }
+
+    public void moreitemsOnClick() {
+        TextView moreitemsTv;
+
+        moreitemsTv = findViewById(R.id.moreitemsTv);
+
+        moreitemsTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Homepage.this, ItemPage.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 
