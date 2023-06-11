@@ -356,7 +356,7 @@ public class HomepageActivity extends AppCompatActivity implements NavigationVie
         tab1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v){
-                Intent intent = new Intent(HomepageActivity.this, ItemActivity.class);
+                Intent intent = new Intent(HomepageActivity.this, TermsActivity.class);
                 intent.putExtra("Username", GLOBAL_USERNAME);
                 startActivity(intent);
             }
@@ -365,7 +365,7 @@ public class HomepageActivity extends AppCompatActivity implements NavigationVie
         tab2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v){
-                Intent intent = new Intent(HomepageActivity.this, ItemActivity.class);
+                Intent intent = new Intent(HomepageActivity.this, ConditionActivity.class);
                 intent.putExtra("Username", GLOBAL_USERNAME);
                 startActivity(intent);
             }
