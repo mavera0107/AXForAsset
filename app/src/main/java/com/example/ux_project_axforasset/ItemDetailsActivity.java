@@ -14,9 +14,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
-public class ItemDetailsPage extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class ItemDetailsActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     Button button;
     AppCompatButton buybutton;
@@ -47,11 +46,11 @@ public class ItemDetailsPage extends AppCompatActivity implements AdapterView.On
         Intent intent = getIntent();
 
         // ambil data dari intent.
-        String mAssetName = intent.getStringExtra(ItemPage.extraName);
-        String mAssetShortDesc = intent.getStringExtra(ItemPage.extraShortDesc);
-        String mAssetLongDesc = intent.getStringExtra(ItemPage.extraLongDesc);
-        String mAssetPrice = intent.getStringExtra(ItemPage.extraPrice);
-        int mImageData = intent.getIntExtra(ItemPage.extraImage,  0);
+        String mAssetName = intent.getStringExtra(ItemActivity.extraName);
+        String mAssetShortDesc = intent.getStringExtra(ItemActivity.extraShortDesc);
+        String mAssetLongDesc = intent.getStringExtra(ItemActivity.extraLongDesc);
+        String mAssetPrice = intent.getStringExtra(ItemActivity.extraPrice);
+        int mImageData = intent.getIntExtra(ItemActivity.extraImage,  0);
 
         // Ubah text dan gambar dari intent.
         atv_assetname.setText(mAssetName);
@@ -99,7 +98,7 @@ public class ItemDetailsPage extends AppCompatActivity implements AdapterView.On
     }
 
     public void backButtonTes() {
-        Intent prevPage = new Intent(this, ItemPage.class);
+        Intent prevPage = new Intent(this, ItemActivity.class);
         prevPage.putExtra("Username", GLOBAL_USERNAME);
         startActivity(prevPage);
     }

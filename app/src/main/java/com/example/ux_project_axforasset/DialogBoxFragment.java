@@ -19,7 +19,7 @@ public class DialogBoxFragment extends AppCompatDialogFragment {
     TextView tv_err_desc;
     int type = 0; // 0 = Error Message, 1 = Success validasi di ItemDetails
 
-    ItemDetailsPage detailspage;
+    ItemDetailsActivity detailspage;
 
     public DialogBoxFragment(String err_name, String err_desc, int type) {
         this.err_name = err_name;

@@ -38,6 +38,7 @@
             android:fontFamily="@font/open_sans"
             android:text="Crosshair"
             android:textSize="12sp"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.181"
             app:layout_constraintStart_toStartOf="parent"

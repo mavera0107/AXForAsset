@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,7 +14,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -23,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
-public class ItemPage extends AppCompatActivity implements ClickInterface, NavigationView.OnNavigationItemSelectedListener{
+public class ItemActivity extends AppCompatActivity implements ClickInterface, NavigationView.OnNavigationItemSelectedListener{
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -202,7 +200,7 @@ public class ItemPage extends AppCompatActivity implements ClickInterface, Navig
         String mAssetPrice = (String) assetlistitem.get(x).getAssetPrice();
         int mAssetImage = assetlistitem.get(x).getAssetImage();
 
-        Intent intentItemDetail = new Intent(this, ItemDetailsPage.class);
+        Intent intentItemDetail = new Intent(this, ItemDetailsActivity.class);
         intentItemDetail.putExtra(extraName, mAssetTitle);
         intentItemDetail.putExtra(extraShortDesc, mAssetShortDesc);
         intentItemDetail.putExtra(extraLongDesc, mAssetLongDesc);
@@ -224,15 +222,15 @@ public class ItemPage extends AppCompatActivity implements ClickInterface, Navig
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
         if(item.getItemId() == R.id.home_menu){
-            Intent intent = new Intent(ItemPage.this, Homepage.class);
+            Intent intent = new Intent(ItemActivity.this, HomepageActivity.class);
             intent.putExtra("Username", GLOBAL_USERNAME);
             startActivity(intent);
         } else if (item.getItemId() == R.id.profile_menu) {
-            Intent intent = new Intent(ItemPage.this, Profile.class);
+            Intent intent = new Intent(ItemActivity.this, ProfileActivity.class);
             intent.putExtra("Username", GLOBAL_USERNAME);
             startActivity(intent);
         } else if (item.getItemId() == R.id.logout_menu) {
-            Intent intent = new Intent(ItemPage.this, Login.class);
+            Intent intent = new Intent(ItemActivity.this, LoginActivity.class);
             startActivity(intent);
         }
 

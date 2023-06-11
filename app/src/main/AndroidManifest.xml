@@ -37,30 +37,40 @@
 >>>>>>> 39890ae (drawer(sidemenu pindah2 belum))
 =======
         <activity
+            android:name=".ConditionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TermsActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".Profile"
+            android:name=".ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".Login"
+            android:name=".LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".ItemPage"
+            android:name=".ItemActivity"
             android:exported="false" />
         <activity
-            android:name=".ItemDetailsPage"
+            android:name=".ItemDetailsActivity"
             android:exported="false" />
 >>>>>>> 006f9f6 (tinggal restriction home sama profile)
         <activity
-            android:name=".Homepage"
+            android:name=".HomepageActivity"
             android:exported="false" />
         <activity
+<<<<<<< HEAD
             android:name=".MainActivity"
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> c9bfe81 (Checkpoint apalah2)
+=======
+            android:name=".MainActivityActivity"
+>>>>>>> 7ff2e25 (meki)
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

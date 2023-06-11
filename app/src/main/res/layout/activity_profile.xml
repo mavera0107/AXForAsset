@@ -5,17 +5,17 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".Profile"
+    tools:context=".ProfileActivity"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-    <com.google.android.material.navigation.NavigationView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:id="@+id/nav_view"
-        app:menu="@menu/side_menu"
-        android:layout_gravity="start">
-    </com.google.android.material.navigation.NavigationView>
+<!--    <com.google.android.material.navigation.NavigationView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:id="@+id/nav_view"-->
+<!--        app:menu="@menu/side_menu"-->
+<!--        android:layout_gravity="start">-->
+<!--    </com.google.android.material.navigation.NavigationView>-->
 
 
     <LinearLayout
@@ -29,10 +29,11 @@
             tools:layout_editor_absoluteY="0dp" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/profile_group"
+            android:layout_width="match_parent"
+            android:layout_height="219dp"
             android:background="@drawable/bg_profile">
+
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="190dp"
@@ -49,6 +50,7 @@
                 android:layout_height="32dp"
                 android:layout_marginTop="24dp"
                 android:text="Hi!"
+                android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textSize="28sp"
                 android:textStyle="bold"
@@ -87,6 +89,7 @@
                 android:textSize="16sp"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="30dp"
+                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -111,6 +114,7 @@
                 android:layout_marginTop="15dp"
                 android:text=" Engine Programming at Bethesda"
                 android:textSize="16sp"
+                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="@+id/textView8"
                 app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -135,6 +139,7 @@
                 android:layout_marginLeft="30dp"
                 android:text="Jl. Raya Kb. Jeruk No.27, RT.1/RW.9, Kb. Jeruk, Kec. Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11530"
                 android:textSize="16sp"
+                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -160,6 +165,7 @@
                 android:textSize="16sp"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="30dp"
+                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView12" />
 

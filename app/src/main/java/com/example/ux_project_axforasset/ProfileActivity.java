@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class Profile extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class ProfileActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     TextView textview,textview2;
 
     DrawerLayout drawerLayout;
@@ -100,15 +100,15 @@ public class Profile extends AppCompatActivity implements NavigationView.OnNavig
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
         if(item.getItemId() == R.id.items_menu){
-            Intent intent = new Intent(Profile.this, ItemPage.class);
+            Intent intent = new Intent(ProfileActivity.this, ItemActivity.class);
             intent.putExtra("Username", GLOBAL_USERNAME);
             startActivity(intent);
         } else if (item.getItemId() == R.id.home_menu) {
-            Intent intent = new Intent(Profile.this, Homepage.class);
+            Intent intent = new Intent(ProfileActivity.this, HomepageActivity.class);
             intent.putExtra("Username", GLOBAL_USERNAME);
             startActivity(intent);
         } else if (item.getItemId() == R.id.logout_menu) {
-            Intent intent = new Intent(Profile.this, Login.class);
+            Intent intent = new Intent(ProfileActivity.this, LoginActivity.class);
             startActivity(intent);
         }
 

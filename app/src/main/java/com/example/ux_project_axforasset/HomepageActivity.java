@@ -19,10 +19,11 @@ import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.Timer;
 import java.util.TimerTask;
 import java.util.Vector;
 
-public class Homepage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, ClickInterface, ClickInterface2 {
+public class HomepageActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, ClickInterface, ClickInterface2 {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
@@ -105,10 +106,11 @@ public class Homepage extends AppCompatActivity implements NavigationView.OnNavi
         ItemSliderAdapter adapter = new ItemSliderAdapter(listImage, this);
         viewPager.setAdapter(adapter);
 
-        java.util.Timer timer = new java.util.Timer();
+        Timer timer = new Timer();
         timer.scheduleAtFixedRate(new The_slide_timer(),2000,3000);
 
         getSemuaItem();
+        moreitemsOnClick();
     }
 
     @Override
@@ -139,12 +141,12 @@ public class Homepage extends AppCompatActivity implements NavigationView.OnNavi
         String mAssetPrice = (String) assetlistitem.get(x).getAssetPrice();
         int mAssetImage = assetlistitem.get(x).getAssetImage();
 
-        Intent intentItemDetail = new Intent(this, ItemDetailsPage.class);
-        intentItemDetail.putExtra(ItemPage.extraName, mAssetTitle);
-        intentItemDetail.putExtra(ItemPage.extraShortDesc, mAssetShortDesc);
-        intentItemDetail.putExtra(ItemPage.extraLongDesc, mAssetLongDesc);
-        intentItemDetail.putExtra(ItemPage.extraPrice, mAssetPrice);
-        intentItemDetail.putExtra(ItemPage.extraImage, mAssetImage);
+        Intent intentItemDetail = new Intent(this, ItemDetailsActivity.class);
+        intentItemDetail.putExtra(ItemActivity.extraName, mAssetTitle);
+        intentItemDetail.putExtra(ItemActivity.extraShortDesc, mAssetShortDesc);
+        intentItemDetail.putExtra(ItemActivity.extraLongDesc, mAssetLongDesc);
+        intentItemDetail.putExtra(ItemActivity.extraPrice, mAssetPrice);
+        intentItemDetail.putExtra(ItemActivity.extraImage, mAssetImage);
         startActivity(intentItemDetail);
     }
 
@@ -152,10 +154,10 @@ public class Homepage extends AppCompatActivity implements NavigationView.OnNavi
         @Override
         public void run() {
 
-            Homepage.this.runOnUiThread(new Runnable() {
+            HomepageActivity.this.runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    if (viewPager.getCurrentItem()< listImage.size()-1) {
+                    if (viewPager.getCurrentItem()<listImage.size()-1) {
                         viewPager.setCurrentItem(viewPager.getCurrentItem()+1);
                     }
                     else
@@ -180,15 +182,15 @@ public class Homepage extends AppCompatActivity implements NavigationView.OnNavi
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
         if(item.getItemId() == R.id.items_menu){
-            Intent intent = new Intent(Homepage.this, ItemPage.class);
+            Intent intent = new Intent(HomepageActivity.this, ItemActivity.class);
             intent.putExtra("Username", GLOBAL_USERNAME);
             startActivity(intent);
         } else if (item.getItemId() == R.id.profile_menu) {
-            Intent intent = new Intent(Homepage.this, Profile.class);
+            Intent intent = new Intent(HomepageActivity.this, ProfileActivity.class);
             intent.putExtra("Username", GLOBAL_USERNAME);
             startActivity(intent);
         } else if (item.getItemId() == R.id.logout_menu) {
-            Intent intent = new Intent(Homepage.this, Login.class);
+            Intent intent = new Intent(HomepageActivity.this, LoginActivity.class);
             startActivity(intent);
         }
 
@@ -329,20 +331,16 @@ public class Homepage extends AppCompatActivity implements NavigationView.OnNavi
     }
 
     public void moreitemsOnClick() {
-        TextView moreitemsTv;
-
-        moreitemsTv = findViewById(R.id.moreitemsTv);
+        TextView moreitemsTv = findViewById(R.id.moreitemsTv);
 
         moreitemsTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Homepage.this, ItemPage.class);
+                Intent intent = new Intent(HomepageActivity.this, ItemActivity.class);
                 intent.putExtra("Username", GLOBAL_USERNAME);
                 startActivity(intent);
             }
         });
-
-
     }
 
 }

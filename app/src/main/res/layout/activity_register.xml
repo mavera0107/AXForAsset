@@ -136,7 +136,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:text="I agree to terms and Condition"
-        android:textColor="#323131"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
         app:layout_constraintHorizontal_bias="0.027"
         app:layout_constraintStart_toStartOf="@+id/imageView2"

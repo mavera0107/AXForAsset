@@ -5,7 +5,7 @@
     android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".ItemDetailsPage">
+    tools:context=".ItemDetailsActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="185dp"
             android:layout_weight="1"
-            android:scaleType="fitXY"
+            android:scaleType="centerCrop"
             app:srcCompat="@drawable/gaming" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -80,6 +80,7 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/open_sans"
                 android:text="Duck who mastered the arts of magic."
+                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_assetName" />
 
@@ -90,6 +91,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/open_sans"
+                android:textColor="@color/black"
                 android:text="A 3D Model Asset in Toon Style! It comes with simple idle and walking animations. "
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_shortdesc" />
@@ -100,6 +102,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
+                android:textColor="@color/black"
                 android:text="The asset will be sent to your email address after you have finished your purchase."
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_getNow" />

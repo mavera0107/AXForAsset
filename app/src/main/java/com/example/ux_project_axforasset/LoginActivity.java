@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class Login extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
 <<<<<<< HEAD
 =======
@@ -29,7 +29,7 @@ public class Login extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Login.this, RegisterActivity.class);
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
         });
@@ -47,9 +47,13 @@ public class Login extends AppCompatActivity {
                 } else if (password.length() < 8) {
                     ltfpw.setError("Password must have at least 8 characters");
                 } else {
+<<<<<<< HEAD:app/src/main/java/com/example/ux_project_axforasset/Login.java
                     globalUser = username;
                     Intent intent = new Intent(Login.this, Homepage.class);
 <<<<<<< HEAD
+=======
+                    Intent intent = new Intent(LoginActivity.this, HomepageActivity.class);
+>>>>>>> 7ff2e25 (meki):app/src/main/java/com/example/ux_project_axforasset/LoginActivity.java
                     intent.putExtra("Username", username);
 =======
 
