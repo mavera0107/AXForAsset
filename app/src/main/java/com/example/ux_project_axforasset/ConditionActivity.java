@@ -9,7 +9,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -23,15 +22,10 @@ public class ConditionActivity extends AppCompatActivity implements NavigationVi
     NavigationView navigationView;
     Toolbar toolbar;
 
-    public void initialize() {
-
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_condition);
-        initialize();
 
         GLOBAL_USERNAME = getIntent().getStringExtra("Username");
 
@@ -41,7 +35,6 @@ public class ConditionActivity extends AppCompatActivity implements NavigationVi
 
         setSupportActionBar(toolbar);
 
-        Menu menu = navigationView.getMenu();
 
         navigationView.bringToFront();
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
@@ -49,7 +42,7 @@ public class ConditionActivity extends AppCompatActivity implements NavigationVi
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-//        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setNavigationItemSelectedListener(this);
 
 //        navigationView.setCheckedItem(R.id.items_menu);
 
@@ -93,7 +86,6 @@ public class ConditionActivity extends AppCompatActivity implements NavigationVi
         TextView tab1 = findViewById(R.id.tab1);
         TextView tab2 = findViewById(R.id.tab2);
         String GLOBAL_USERNAME;
-        Intent intent;
         GLOBAL_USERNAME = getIntent().getStringExtra("Username");
 
         tab1.setOnClickListener(new View.OnClickListener() {

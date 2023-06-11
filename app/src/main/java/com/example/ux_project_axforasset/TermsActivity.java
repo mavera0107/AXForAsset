@@ -7,10 +7,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -23,10 +21,6 @@ public class TermsActivity extends AppCompatActivity implements NavigationView.O
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
-
-    public void initialize() {
-
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,17 +35,14 @@ public class TermsActivity extends AppCompatActivity implements NavigationView.O
 
         setSupportActionBar(toolbar);
 
-        Menu menu = navigationView.getMenu();
-
         navigationView.bringToFront();
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
                 R.string.nav_open_drawer, R.string.nav_close_drawer);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-//        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setNavigationItemSelectedListener(this);
 
-//        navigationView.setCheckedItem(R.id.items_menu);
         navBarTnC();
     }
 
@@ -92,7 +83,6 @@ public class TermsActivity extends AppCompatActivity implements NavigationView.O
         TextView tab1 = findViewById(R.id.tab1);
         TextView tab2 = findViewById(R.id.tab2);
         String GLOBAL_USERNAME;
-        Intent intent;
         GLOBAL_USERNAME = getIntent().getStringExtra("Username");
 
         tab1.setOnClickListener(new View.OnClickListener() {
