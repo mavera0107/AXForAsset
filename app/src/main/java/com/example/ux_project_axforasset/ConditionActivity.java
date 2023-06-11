@@ -42,7 +42,6 @@ public class ConditionActivity extends AppCompatActivity implements NavigationVi
         setSupportActionBar(toolbar);
 
         Menu menu = navigationView.getMenu();
-        menu.findItem(R.id.items_menu).setVisible(false);
 
         navigationView.bringToFront();
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,

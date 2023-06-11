@@ -42,7 +42,6 @@ public class TermsActivity extends AppCompatActivity implements NavigationView.O
         setSupportActionBar(toolbar);
 
         Menu menu = navigationView.getMenu();
-        menu.findItem(R.id.items_menu).setVisible(false);
 
         navigationView.bringToFront();
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
