@@ -49,7 +49,7 @@ public class TermsActivity extends AppCompatActivity implements NavigationView.O
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        navigationView.setNavigationItemSelectedListener(this);
+//        navigationView.setNavigationItemSelectedListener(this);
 
         navigationView.setCheckedItem(R.id.items_menu);
         navBarTnC();
