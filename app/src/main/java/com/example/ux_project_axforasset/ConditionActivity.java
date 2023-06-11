@@ -51,7 +51,7 @@ public class ConditionActivity extends AppCompatActivity implements NavigationVi
 
 //        navigationView.setNavigationItemSelectedListener(this);
 
-        navigationView.setCheckedItem(R.id.items_menu);
+//        navigationView.setCheckedItem(R.id.items_menu);
 
         navBarTnC();
     }

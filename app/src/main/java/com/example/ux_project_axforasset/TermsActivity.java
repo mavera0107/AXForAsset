@@ -51,7 +51,7 @@ public class TermsActivity extends AppCompatActivity implements NavigationView.O
 
 //        navigationView.setNavigationItemSelectedListener(this);
 
-        navigationView.setCheckedItem(R.id.items_menu);
+//        navigationView.setCheckedItem(R.id.items_menu);
         navBarTnC();
     }
 
