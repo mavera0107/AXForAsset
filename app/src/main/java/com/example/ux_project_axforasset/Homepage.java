@@ -197,7 +197,7 @@ public class Homepage extends AppCompatActivity implements NavigationView.OnNavi
     }
 
     public void getSemuaItem () {
-        // Get semua assetItem. maaf gapake for loop
+        // Get semua assetItem
         rv_peringkatAtas = (RecyclerView) findViewById(R.id.rv_peringkatatas);
         rv_palingpopuler = (RecyclerView) findViewById(R.id.rv_paling_populer);
         rv_rekomendasi = (RecyclerView) findViewById(R.id.rv_rekomendasi);
@@ -335,8 +335,9 @@ public class Homepage extends AppCompatActivity implements NavigationView.OnNavi
 
         moreitemsTv.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 Intent intent = new Intent(Homepage.this, ItemPage.class);
+                intent.putExtra("Username", GLOBAL_USERNAME);
                 startActivity(intent);
             }
         });

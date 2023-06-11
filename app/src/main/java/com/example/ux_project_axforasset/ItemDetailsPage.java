@@ -2,6 +2,7 @@ package com.example.ux_project_axforasset;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,6 +24,8 @@ public class ItemDetailsPage extends AppCompatActivity implements AdapterView.On
     TextView atv_assetname, atv_price, atv_shortdesc, atv_longdesc;
     ImageView aiv_assetimage;
     Spinner paymentSpinner;
+    String GLOBAL_USERNAME;
+    ConstraintLayout assetItem1;
     int spinnerValue = 0;
 
 
@@ -30,6 +33,7 @@ public class ItemDetailsPage extends AppCompatActivity implements AdapterView.On
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        GLOBAL_USERNAME = getIntent().getStringExtra("Username");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_details_page);
 
@@ -96,6 +100,7 @@ public class ItemDetailsPage extends AppCompatActivity implements AdapterView.On
 
     public void backButtonTes() {
         Intent prevPage = new Intent(this, ItemPage.class);
+        prevPage.putExtra("Username", GLOBAL_USERNAME);
         startActivity(prevPage);
     }
 

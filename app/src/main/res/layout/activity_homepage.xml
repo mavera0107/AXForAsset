@@ -14,6 +14,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     <!--    <com.google.android.material.navigation.NavigationView-->
     <!--        android:layout_width="wrap_content"-->
@@ -24,12 +25,15 @@
 =======
 =======
 >>>>>>> c9bfe81 (Checkpoint apalah2)
+=======
+>>>>>>> 32589d8 (meki)
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:id="@+id/nav_view"
         app:menu="@menu/side_menu"
         android:layout_gravity="start"/>
+<<<<<<< HEAD
 >>>>>>> 8465190 (Semua udah ada menunya + global var udah aman)
 =======
 <!--    <com.google.android.material.navigation.NavigationView-->
@@ -39,6 +43,8 @@
 <!--        app:menu="@menu/side_menu"-->
 <!--        android:layout_gravity="start"/>-->
 >>>>>>> a7c6a1e (meki)
+=======
+>>>>>>> 32589d8 (meki)
 
     <ScrollView
         android:layout_width="match_parent"
@@ -247,8 +253,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="38dp"
                 android:text="Show more items"
-                android:gravity="center"
-                android:clickable="true"/>
+                android:gravity="center" />
 
 
         </LinearLayout>
